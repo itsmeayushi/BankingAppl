@@ -28,6 +28,16 @@ public class RegisterServiceImpl implements RegisterService{
 		return true;
 	}
 
+	@Override
+	public List<Register> findRegisterByUserid(String userid, String loginpwd) {
+		return regRepo.findByUserid(userid, loginpwd);
+	}
+
+	@Override
+	public List<Register> updateRegisterByUserid(String userid, String loginpwd) {
+		return regRepo.updateByUserid(userid, loginpwd);
+	}
+
 //	@Override
 //	public boolean checkLogin(String userid, String loginpwd) {
 //		if()
