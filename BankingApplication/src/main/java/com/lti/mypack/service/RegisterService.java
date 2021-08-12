@@ -10,5 +10,7 @@ public interface RegisterService {
 	
 	public boolean addRegister(Register register);
 	
+//	public boolean checkLogin(String userid, String loginpwd);
+	
 
 }

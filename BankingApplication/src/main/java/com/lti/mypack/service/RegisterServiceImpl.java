@@ -28,6 +28,12 @@ public class RegisterServiceImpl implements RegisterService{
 		return true;
 	}
 
+//	@Override
+//	public boolean checkLogin(String userid, String loginpwd) {
+//		if(userid=)
+//		return false;
+//	}
+
 	
 	
 
