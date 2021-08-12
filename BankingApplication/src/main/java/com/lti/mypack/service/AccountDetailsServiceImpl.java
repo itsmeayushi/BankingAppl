@@ -20,4 +20,24 @@ public class AccountDetailsServiceImpl implements AccountDetailsService {
 		return accRepo.findById(accountno).get();
 	}
 
+	@Override
+	public boolean addAccountDetails(AccountDetails accountDetails) {
+		accRepo.save(accountDetails);
+		return true;
+	}
+
+//	@Override
+//	public AccountDetails updateAccountDetailsByOldid(AccountDetails accountDetails) {
+//		System.out.println("hello");
+//		AccountDetails updAccD= accRepo.findByAccountoldid(accountDetails.getAccountoldid().getOldid());
+//		System.out.println(updAccD.getUserid());
+//		updAccD.setAccountoldid(accountDetails.getAccountoldid());
+//		updAccD= accountDetails;
+//		return accRepo.save(updAccD);
+//	}
+
+	
+	
+	
+
 }

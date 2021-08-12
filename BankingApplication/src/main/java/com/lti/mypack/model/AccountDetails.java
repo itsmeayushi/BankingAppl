@@ -20,11 +20,12 @@ public class AccountDetails {
 	private String accounttype;
 	private String accountbalance;
 	private String userifsccode;
+	private String oldid;
 	
 	@NotNull
 	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name="oldid")
-	Account account;
+	@JoinColumn(name="oldid", insertable=false, updatable= false)
+	Account accountoldid;
 	
 	public AccountDetails() {
 		super();
@@ -80,16 +81,32 @@ public class AccountDetails {
 		this.userifsccode = userifsccode;
 	}
 
-
-	public Account getAccount() {
-		return account;
+	public Account getAccountoldid() {
+		return accountoldid;
 	}
 
-	public void setAccount(Account account) {
-		this.account = account;
+	public void setAccountoldid(Account accountoldid) {
+		this.accountoldid = accountoldid;
 	}
+
+	@Override
+	public String toString() {
+		return "AccountDetails [accountno=" + accountno + ", userid=" + userid + ", accounttype=" + accounttype
+				+ ", accountbalance=" + accountbalance + ", userifsccode=" + userifsccode + ", accountoldid="
+				+ accountoldid + "]";
+	}
+
+	public String getOldid() {
+		return oldid;
+	}
+
+	public void setOldid(String oldid) {
+		this.oldid = oldid;
+	}
+
 	
 	
 	
 
-}
+
+	}
