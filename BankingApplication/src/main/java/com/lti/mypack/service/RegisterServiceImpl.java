@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.lti.mypack.model.AccountDetails;
 import com.lti.mypack.model.Register;
 import com.lti.mypack.repository.RegisterRepository;
 
@@ -23,8 +24,15 @@ public class RegisterServiceImpl implements RegisterService{
 
 	@Override
 	public boolean addRegister(Register register) {
-		regRepo.save(register);
+		 regRepo.save(register);
 		return true;
 	}
+
+	
+	
+
+	
+	
+
 
 }

@@ -5,11 +5,13 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.lti.mypack.model.AccountDetails;
 import com.lti.mypack.model.Register;
 import com.lti.mypack.service.RegisterService;
 
@@ -25,9 +27,11 @@ public class RegisterController {
 		return regService.getRegisters();
 	}
 	
-	@PostMapping("/register")
+	@PostMapping("/register") 
 	public boolean addRegister(@RequestBody Register register) {
 		return regService.addRegister(register);
 	}
+	
+	
 
 }

@@ -7,6 +7,7 @@ import com.lti.mypack.model.Register;
 
 @Repository
 public interface RegisterRepository extends JpaRepository<Register, String>{
+
 	
 	
 
