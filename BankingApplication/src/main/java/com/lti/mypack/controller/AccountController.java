@@ -33,7 +33,7 @@ public class AccountController {
 	
 	
 	@GetMapping("/accounts/{oldid}")
-	public Account getAccountById(@PathVariable(value="id") String oldid) {
+	public Account getAccountById(@PathVariable(value="oldid") String oldid) {
 		return accService.findAccount(oldid);
 		
 	}

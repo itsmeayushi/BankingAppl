@@ -30,7 +30,7 @@ public class RegisterServiceImpl implements RegisterService{
 
 //	@Override
 //	public boolean checkLogin(String userid, String loginpwd) {
-//		if(userid=)
+//		if()
 //		return false;
 //	}
 

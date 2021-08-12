@@ -17,7 +17,6 @@ public class Register {
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name="accountno")
 	AccountDetails accDetails;
-
 	
 	private String userid;
 	private String loginpwd;
